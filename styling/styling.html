@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="./static/main.js" defer></script>
+    <title>Styling with JS</title>
+</head>
+
+<body class="container justify-content-center align-items-center bg-info">
+
+    <div class="row my-5 mx-2">
+        <h3 class="text-center">Create a Cool RPG Character</h3>
+        <form class="row g-3 p-4 border rounded shadow bg-light" onsubmit="handleGetData(event)">
+            <div class="col-md-12">
+                <label for="formname" class="form-label">Name</label>
+                <input type="text" name='name' class="form-control" id="formname" autocomplete="true">
+            </div>
+            <div class="col-md-12">
+                <label for="formplayer" class="form-label">Player</label>
+                <input type="text" name='player' class="form-control" id="formplayer" autocomplete="true">
+            </div>
+            <div class="col-md-6">
+                <div onmouseover="handleMouseOver()">Select Class
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Class</option>
+                    <option name="class" value="wizard">Wizard</option>
+                    <option name="class" value="fighter">Fighter</option>
+                    <option name="class" value="rogue">Rogue</option>
+                    <option name="class" value="barbarian">Barbarian</option>
+                    <option name="class" value="assassin">Assassin</option>
+                  </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div onmouseout="handleMouseOut()">Select Race
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Race</option>
+                    <option name="race" value="human">Human</option>
+                    <option name="race" value="orc">Orc</option>
+                    <option name="race" value="dwarf">Dwarf</option>
+                    <option name="race" value="khajiit">Khajiit</option>
+                  </select>
+                  </div>
+            </div>
+            
+            <div class="col-12">
+                <button type="submit" id="submit-button" class="btn btn-info ">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="row g-3 character-display">
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
